@@ -24,6 +24,8 @@ public class DemonstracjaKolekcji {
 
     private Person temp = null;
 
+    private final Comparator<Person> comparator = new NFComparator();
+
     private final Scanner scan = new Scanner(System.in);
 
     public DemonstracjaKolekcji() throws PersonException {
@@ -75,6 +77,28 @@ public class DemonstracjaKolekcji {
          TreeMap z6 = new TreeMap();
          System.out.println("\nOPERACJE DLA: "+z6.getClass());
          wykonaj(z6);
+         //7. Comparable vs Comparator
+
+         System.out.println("Comparable ania - ania2: "+ ania.compareTo(ania2));
+         System.out.println("Comparator ania - ania2: " + comparator.compare(ania,ania2));
+try {
+
+
+    System.out.println("Comparable ania - null: " + ania.compareTo(null));
+}catch(Exception e){System.out.println("Comparable ania - null:  nie mozna porownac z nullem");}
+
+         try {
+
+             System.out.println("Comparator ania - null: " + comparator.compare(ania,null));
+
+         }catch(Exception e){System.out.println("Comparator ania - null:  nie mozna porownac z nullem");}
+
+
+         System.out.println("Comparable ania - agnieszka: "+ ania.compareTo(agnieszka));
+         System.out.println("Comparator ania - agnieszka: " + comparator.compare(ania,agnieszka));
+
+         System.out.println("Comparable ania - aniaS: "+ ania.compareTo(aniaS));
+         System.out.println("Comparator ania - aniaS: " + comparator.compare(ania,aniaS));
     }
 
     private void wykonaj(AbstractMap zestaw) {System.out.println("Teraz BEZ equals i hashcode");

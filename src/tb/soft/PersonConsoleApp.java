@@ -34,7 +34,7 @@ public class PersonConsoleApp {
 			"4 - Stanowisko     \n" +
 	        "0 - Powrót do menu głównego\n";
 
-	
+
 	/**
 	 * ConsoleUserDialog to pomocnicza klasa zawierająca zestaw
 	 * prostych metod do realizacji dialogu z użytkownikiem
